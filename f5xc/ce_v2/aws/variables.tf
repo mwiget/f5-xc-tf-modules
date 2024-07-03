@@ -420,157 +420,6 @@ variable "f5xc_site_type_is_secure_mesh_site" {
   default = true
 }
 
-variable "f5xc_ce_machine_image" {
-  type = object({
-    ingress_gateway = object({
-      af-south-1     = string
-      ap-south-1     = string
-      eu-north-1     = string
-      eu-west-3      = string
-      eu-south-1     = string
-      eu-west-2      = string
-      eu-west-1      = string
-      ap-northeast-3 = string
-      ap-northeast-2 = string
-      me-south-1     = string
-      ap-northeast-1 = string
-      ca-central-1   = string
-      sa-east-1      = string
-      ap-east-1      = string
-      ap-southeast-1 = string
-      ap-southeast-2 = string
-      eu-central-1   = string
-      ap-southeast-3 = string
-      us-east-1      = string
-      us-east-2      = string
-      us-west-1      = string
-      us-west-2      = string
-    })
-    ingress_egress_gateway = object({
-      af-south-1     = string
-      ap-south-1     = string
-      eu-north-1     = string
-      eu-west-3      = string
-      eu-south-1     = string
-      eu-west-2      = string
-      eu-west-1      = string
-      ap-northeast-3 = string
-      ap-northeast-2 = string
-      me-south-1     = string
-      ap-northeast-1 = string
-      ca-central-1   = string
-      sa-east-1      = string
-      ap-east-1      = string
-      ap-southeast-1 = string
-      ap-southeast-2 = string
-      eu-central-1   = string
-      ap-southeast-3 = string
-      us-east-1      = string
-      us-east-2      = string
-      us-west-1      = string
-      us-west-2      = string
-    })
-    voltstack_gateway = object({
-      af-south-1     = string
-      ap-south-1     = string
-      eu-north-1     = string
-      eu-west-3      = string
-      eu-south-1     = string
-      eu-west-2      = string
-      eu-west-1      = string
-      ap-northeast-3 = string
-      ap-northeast-2 = string
-      me-south-1     = string
-      ap-northeast-1 = string
-      ca-central-1   = string
-      sa-east-1      = string
-      ap-east-1      = string
-      ap-southeast-1 = string
-      ap-southeast-2 = string
-      eu-central-1   = string
-      ap-southeast-3 = string
-      us-east-1      = string
-      us-east-2      = string
-      us-west-1      = string
-      us-west-2      = string
-    })
-  })
-  default = {
-    ingress_gateway = {
-      af-south-1     = "ami-0dd7a6da7161c6940"
-      ap-south-1     = "ami-04f4b057cdfae232d"
-      eu-north-1     = "ami-0323204b43cf4427d"
-      eu-west-3      = "ami-0f67f2b80eaff5e6a"
-      eu-south-1     = "ami-02cbc50164cd05e7a"
-      eu-west-2      = "ami-09408cd0d39d087ad"
-      eu-west-1      = "ami-03c875b9908e04737"
-      ap-northeast-3 = "ami-0e549fd46bc34dad9"
-      ap-northeast-2 = "ami-03ee4e9dc5a895538"
-      me-south-1     = "ami-0ff52d8834a2ed9fe"
-      ap-northeast-1 = "ami-021a8e03b83a767ab"
-      ca-central-1   = "ami-0bad12be22379f9a6"
-      sa-east-1      = "ami-05b23bc6cf1649e0a"
-      ap-east-1      = "ami-0616b484a4b48fe34"
-      ap-southeast-1 = "ami-0bfa8b0ab593b8ea5"
-      ap-southeast-2 = "ami-0bd25bc1d097e57aa"
-      eu-central-1   = "ami-0b0912acc6a94069b"
-      ap-southeast-3 = "ami-08475b5dcdae8312d"
-      us-east-1      = "ami-044129a2ee46c520d"
-      us-east-2      = "ami-05dd49c52b2c70521"
-      us-west-1      = "ami-0cbbd212f1ad3985f"
-      us-west-2      = "ami-0fef0232e8ae0526c"
-    }
-    ingress_egress_gateway = {
-      af-south-1     = "ami-0cc40407dc7f37181"
-      ap-south-1     = "ami-06b385417fa451722"
-      eu-north-1     = "ami-0483fe084eb50dd66"
-      eu-west-3      = "ami-051b65a85e55301d9"
-      eu-south-1     = "ami-0d787b83a9953bf14"
-      eu-west-2      = "ami-0c962ac76daf1169e"
-      eu-west-1      = "ami-0e91e46737f405e1d"
-      ap-northeast-3 = "ami-0ab73daa18a7bd36e"
-      ap-northeast-2 = "ami-0c8257eded5e2d003"
-      me-south-1     = "ami-0c90549a67445f5b3"
-      ap-northeast-1 = "ami-028b0818222aac4aa"
-      ca-central-1   = "ami-06c85c3c80280301a"
-      sa-east-1      = "ami-0015a055fee534331"
-      ap-east-1      = "ami-01d124c67d70ed00f"
-      ap-southeast-1 = "ami-02a5c37f336eadc48"
-      ap-southeast-2 = "ami-03e3dc8a8d24cfb18"
-      eu-central-1   = "ami-0153cf2bf0c44ce6c"
-      ap-southeast-3 = "ami-0388582a0237a67ed"
-      us-east-1      = "ami-06946ea511e23ce70"
-      us-east-2      = "ami-0393e8d226f4a7834"
-      us-west-1      = "ami-0e09c5ea5ee807f6b"
-      us-west-2      = "ami-0a05f2c70c4203b8f"
-    }
-    voltstack_gateway = {
-      af-south-1     = "ami-038b4b28b296f2c05"
-      ap-south-1     = "ami-0b26483209bc17b3b"
-      eu-north-1     = "ami-06883f5fd89044a3c"
-      eu-west-3      = "ami-06bee04255e5363c5"
-      eu-south-1     = "ami-038830d26f31bf5a1"
-      eu-west-2      = "ami-09d5c89de31788d9c"
-      eu-west-1      = "ami-0220aa19a3043c363"
-      ap-northeast-3 = "ami-0199149abed7da517"
-      ap-northeast-2 = "ami-07b43f4cdb8de076d"
-      me-south-1     = "ami-0284ffd2753acddc4"
-      ap-northeast-1 = "ami-01d252e0de4fb4fc9"
-      ca-central-1   = "ami-003ad6a838aefd8e4"
-      sa-east-1      = "ami-038e519d52ab7ae4a"
-      ap-east-1      = "ami-0f5694296b07c7432"
-      ap-southeast-1 = "ami-092e0f7d7cb269dc7"
-      ap-southeast-2 = "ami-0ab4517d461a73c0e"
-      eu-central-1   = "ami-000151f67563f0b5e"
-      ap-southeast-3 = "ami-00f5b0b2266a95fde"
-      us-east-1      = "ami-08d455e7350ea38c9"
-      us-east-2      = "ami-06da3b6b3f8ffe439"
-      us-west-1      = "ami-02bb20e5fb2e5f0aa"
-      us-west-2      = "ami-073716a5d00689881"
-    }
-  }
-}
-
 variable "f5xc_ce_performance_enhancement_mode" {
   type = object({
     perf_mode_l7_enhanced = bool
@@ -689,4 +538,14 @@ variable "f5xc_ce_egress_ip_ranges" {
     "54.240.192.0/18",
     "52.94.208.0/21"
   ]
+}
+
+variable "aws_ami_owner" {
+  type    = string
+  default = "434481986642"  # F5 XC 
+}
+
+variable "aws_ami_name" {
+  type    = string
+  default = "rhel-9.2024.19-combo-*"
 }
